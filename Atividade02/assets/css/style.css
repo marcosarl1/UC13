@@ -1,0 +1,59 @@
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer {
+    height: 70px;
+    width: 100vw;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+socials {
+    display: flex;
+    gap: 20px;
+}
+
+.socials a {
+    margin-left: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 0 20px;
+        height: 60px;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
+    }
+
+    .socials {
+        gap: 15px;
+    }
+
+    .socials a {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+}

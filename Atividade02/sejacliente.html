@@ -1,10 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Seja Cliente</title>
+        <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
-
+        <div class="menu-container"></div>
+        <main class="main-content">
+            <section class="client-section">
+                <img src="assets/images/contract-loan-svgrepo-com.svg" alt="Seja nosso cliente!" class="client-image">
+                <div class="client-content">
+                    <h1>Seja nosso cliente</h1>
+                    <p>Seja um cliente e aproveite as vantagens exclusivas que temos para você. Faça parte da nossa
+                        comunidade e tenha acesso a empréstimos com taxas especiais e condições personalizadas.</p>
+                </div>
+            </section>
+            <div class="form-container">
+                <section class="client-form-section">
+                    <form class="client-form">
+                        <div class="client-form-container">
+                            <label for="client-name">Nome completo:</label>
+                            <input type="text" id="client-name" name="client-name" required>
+                        </div>
+                        <div class="client-form-container">
+                            <label for="client-email">E-mail:</label>
+                            <input type="email" id="client-email" name="client-email" required>
+                        </div>
+                        <div class="client-form-container">
+                            <label for="client-phone">Telefone:</label>
+                            <input type="tel" id="client-phone" name="client-phone" required>
+                        </div>
+                        <div class="client-form-container">
+                            <label for="loan-type">Tipo de serviço:</label>
+                            <select id="loan-type" name="loan-type" required>
+                                <option value="personal">Empréstimo Pessoal</option>
+                                <option value="consignado">Empréstimo Consignado</option>
+                                <option value="refinanciamento">Refinanciamento de Empréstimo</option>
+                            </select>
+                        </div>
+                        <div class="client-form-checkbox">
+                            <input type="checkbox" id="client-retired" name="client-retired">
+                            <label for="client-retired">Sou aposentado</label>
+                        </div>
+                        <button type="submit" id="client-submit">Cadastrar</button>
+                    </form>
+                </section>
+            </div>
+        </main>
+        <div class="footer-container"></div>
+        <script src="assets/js/components.js"></script>
     </body>
 </html>

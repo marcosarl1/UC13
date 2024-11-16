@@ -1,16 +1,19 @@
 html, body {
     width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #f5f6fa;
+    display: flex;
+    flex-direction: column;
 }
 
 .menu {
     width: 233px;
     height: 100vh;
     background-color: #3498db;
-    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,6 +21,7 @@ html, body {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 0;
 }
 
 .menu-divider {
@@ -77,9 +81,9 @@ html, body {
 }
 
 
-.footer {
+footer {
     height: 70px;
-    width: 100vw;
+    width: 100%;
     background-color: #3498db;
     color: white;
     display: flex;
@@ -87,9 +91,10 @@ html, body {
     align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
+    z-index: 100;
     bottom: 0;
     left: 0;
-    position: fixed;
+    position: sticky;
 }
 
 .footer p {
@@ -109,11 +114,223 @@ html, body {
     text-decoration: none;
 }
 
+.main-content {
+    flex-grow: 1;
+    margin-left: 281px;
+    padding: 20px;
+}
+
+.special-offers {
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.special-offers h1 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+}
+
+.special-offers p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.offers-list {
+    list-style: disc;
+    padding-left: 24px;
+}
+
+.offers-list li {
+    margin-bottom: 8px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-image {
+    width: 100%;
+    height: 300px;
+}
+
+.service-content {
+    padding: 20px;
+}
+
+.service-content h3 {
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+
+.service-content p {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.service-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.loan-types, .simulator-section, .faq-section {
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.loan-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.loan-card {
+    flex: 1;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.simulation-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.simulation-results {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.simulation-results table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.simulation-results td {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.simulation-results h2 {
+    margin-bottom: 16px;
+    color: #2c3e50;
+}
+
+.simulation-form label {
+    font-weight: bold;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.simulation-form select,
+.simulation-form input,
+.simulation-form button {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #CCC;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.simulation-form button, .seja-cliente {
+    width: fit-content;
+    min-width: 200px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 12px;
+    display: block;
+
+    margin-right: auto;
+    text-align: center;
+}
+
+.simulation-form button:hover, .seja-cliente:hover {
+    background-color: #2980b9;
+}
+
+.seja-cliente {
+    margin: 24px auto;
+    box-sizing: border-box;
+}
+
+.faq-section {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 0;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.faq-answer {
+    margin-top: 1rem;
+    display: none;
+    padding: 12px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
+
 @media (max-width: 768px) {
     .menu {
         width: 80px;
-        padding: 15px 10px;
-        align-items: center;
+        padding: 1rem;
     }
 
     .logo {
@@ -127,9 +344,35 @@ html, body {
         padding: 10px;
     }
 
+    .main-content {
+        margin-left: 100px;
+
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .simulation-container {
+        grid-template-columns: 1fr;
+    }
+
+    .loan-types {
+        grid-template-columns: 1fr;
+    }
+
+    .loan-grid {
+        flex-direction: column;
+    }
+
+    .simulation-container {
+        flex-direction: column;
+    }
+
     .footer {
         padding: 0 20px;
         height: 60px;
+        position: relative;
     }
 
     .footer p {

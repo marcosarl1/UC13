@@ -1,10 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Emprestimos</title>
+        <link href="assets/css/style.css" rel="stylesheet">
     </head>
     <body>
+        <div class="menu-container"></div>
+        <main class="main-content">
+            <section class="loan-types">
+                <h1>Tipos de empréstimos</h1>
+                <div class="loan-grid">
+                    <div class="loan-card">
+                        <div class="loan-content">
+                            <h3>Empréstimo Pessoal</h3>
+                            <p>Ideal para despesas inesperadas e projetos pessoais, com taxas acessíveis.</p>
+                        </div>
+                    </div>
+                    <div class="loan-card">
+                        <div class="loan-content">
+                            <h3>Empréstimo Consignado</h3>
+                            <p>Opção vantajosa para quem possui renda fixa, com taxas reduzidas.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="simulator-section">
+                <h1>Simule seu Empréstimo</h1>
+                <div class="simulation-container">
+                    <form class="simulation-form">
+                        <label for="loan-type">Tipo de Empréstimo:</label>
+                        <select id="loan-type">
+                            <option value="personal">Empréstimo Pessoal</option>
+                            <option value="consignado">Empréstimo Consignado</option>
+                            <option value="refinanciamento">Refinanciamento de Empréstimo</option>
+                        </select>
 
+                        <label for="loan-amount">Valor Desejado:</label>
+                        <select id="loan-amount">
+                            <option value="5000">R$ 5.000,00</option>
+                            <option value="10000">R$ 10.000,00</option>
+                            <option value="20000">R$ 20.000,00</option>
+                        </select>
+
+                        <label for="months">Quantidade de meses:</label>
+                        <input type="number" id="months" min="3" max="100" value=""
+                               placeholder="Digite quantidade de meses para pagamento">
+                        <button type="button" id="simulate-button">Simular</button>
+                    </form>
+                    <div class="simulation-results">
+                        <h2>Detalhes da simulação</h2>
+                        <table>
+                            <tr>
+                                <td>Valor solicitado:</td>
+                                <td id="requested-amount">-</td>
+                            </tr>
+                            <tr>
+                                <td>Quantidade de parcelas:</td>
+                                <td id="installments">-</td>
+                            </tr>
+                            <tr>
+                                <td>Valor da parcela:</td>
+                                <td id="installment-value">-</td>
+                            </tr>
+                            <tr>
+                                <td>Taxa de juros</td>
+                                <td id="interest-rate">-</td>
+                            </tr>
+                            <tr>
+                                <td>Valor total:</td>
+                                <td id="total-value">-</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <a href="sejacliente.html" class="seja-cliente">Seja nosso cliente</a>
+            </section>
+
+            <section class="faq-section">
+                <h1>Perguntas frequentes</h1>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Quais documentos são necessários?</span>
+                    </div>
+                    <div class="faq-answer">Você precisará de RG, CPF e comprovante de renda.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Qual o prazo para aprovação?</span>
+                    </div>
+                    <div class="faq-answer">A aprovação pode levar até 24 horas úteis.</div>
+                </div>
+
+            </section>
+        </main>
+        <div class="footer-container"></div>
+        <script src="assets/js/components.js"></script>
+        <script src="assets/js/emprestimos.js"></script>
     </body>
 </html>

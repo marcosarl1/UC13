@@ -4,12 +4,145 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Hotel</title>
-      <link rel="stylesheet" href="assets/css/style.css">
-      <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     </head>
     <body>
-
-
-      <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/Hotel-PNG-Pic.png" alt="Logo">
+                </a>
+            </div>
+        </nav>
+        <section class="container mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="p-4">
+                        <h1 class="mb-4">Sinta o conforto acolhedor de nossas hospedagens</h1>
+                        <p class="mb-4">Hospede-se nos nossos hotéis com quartos a partir de R$ 100,00.</p>
+                        <button class="btn btn-primary">SAIBA MAIS</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/images/ice-178163-120191068-424668.jpg" alt="Foto do hotel"
+                         class="img-fluid rounded">
+                </div>
+            </div>
+        </section>
+        <section class="container mt-5">
+            <h2 class="text-center mb-4">POR QUE SE HOSPEDAR EM NOSSOS HOTÉIS?</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="assets/images/icons/coffee-svgrepo-com.svg" class="img-fluid" alt="Café da manhã"
+                             id="coffee-img">
+                        <div>
+                            <h3>Delicioso café da manhã</h3>
+                            <p class="mb-0">Incluso em todas as diárias</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="assets/images/icons/location-pin-alt-1-svgrepo-com.svg" alt="Localização"
+                             class="img-fluid" id="location-image">
+                        <div>
+                            <h3>Fácil acesso</h3>
+                            <p class="mb-0">Perto dos principais pontos turísticos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container mt-5">
+            <h2 class="text-center mb-4">NOSSOS QUARTOS</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/images/suite-solteiro.jpg" class="card-img-top" alt="Suite Solteiro">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Suite Solteiro</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/images/suite-casal.jpg" class="card-img-top" alt="Suite Casal">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Suite Casal</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/images/suite-master.jpg" class="card-img-top" alt="Suite Master">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Suite Master</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card" id="card-form">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h2 class="card-title mb-4">FAÇA SUA RESERVA</h2>
+                                    <p class="mb-4">Entre em contato conosco informando as datas desejadas. Lhe
+                                        retornaremos
+                                        informando a disponibilidade e repassando detalhes da reserva</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="nome" class="form-label">Nome</label>
+                                                <input type="text" class="form-control" id="nome" required>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="email" class="form-label">E-mail</label>
+                                                <input type="email" class="form-control" id="email" required>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="entrada" class="form-label">Data de entrada</label>
+                                                <input type="date" class="form-control" id="entrada" required>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="saida" class="form-label">Data de Saída</label>
+                                                <input type="date" class="form-control" id="saida" required>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="observacoes" class="form-label">Observações</label>
+                                                <textarea class="form-control" id="observacoes" rows="3"></textarea>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <label for="adultos" class="form-label">Adultos</label>
+                                                <input type="number" class="form-control" id="adultos" min="1" required>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <label for="criancas" class="form-label">Crianças</label>
+                                                <input type="number" class="form-control" id="criancas" min="0">
+                                            </div>
+                                            <div class="col-md-4 mb-3 d-flex align-items-end">
+                                                <button type="submit" class="btn btn-primary">Enviar</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     </body>
 </html>

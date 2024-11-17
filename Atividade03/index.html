@@ -1,51 +1,75 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página de Pagamento</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Pagamentos</title>
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
-        <div class="container">
-            <h1>Pagamento</h1>
-            <form class="payment-form">
-                <label for="payment-value">Valor:</label>
-                <input type="number" id="payment-value" name="payment-value" placeholder="Digite o valor" required>
-                <div class="payment-methods">
-                    <input type="radio" id="pix" name="payment-method" value="pix">
-                    <label for="pix">Pix</label>
-                    <input type="radio" id="credit-card" name="payment-method" value="credit-card">
-                    <label for="credit-card">Cartão de Crédito</label>
-                    <button id="informar-dados">Informar dados</button>
+        <div class="payment-form">
+            <div class="form-group">
+                <label for="valor">Valor</label>
+                <input type="number" id="valor" min="0" step="0.01">
+            </div>
+            <div class="payment-options">
+                <input type="radio" id="pix" name="payment" value="pix" checked>
+                <label for="pix">PIX</label>
+
+                <input type="radio" id="credit-card" name="payment" value="credit">
+                <label for="credit-card">Cartão de Crédito</label>
+            </div>
+            <button onclick="showPaymentPanel()">Informar dados</button>
+            <div id="error-valor" class="error-message">
+                O campo valor deve ser preenchido
+            </div>
+            <div id="pix-panel" class="panel">
+                <h3>PIX</h3>
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf">
                 </div>
-            </form>
-            <div id="pix-panel" class="payment-panel">
-                <h2>PIX</h2>
-                <label for="cpf">CPF:</label>
-                <input type="text" id="cpf" name="cpf">
+                <div>Total: R$ <span id="pix-total">0,00</span></div>
             </div>
-            <div id="credit-card-panel" class="payment-panel">
-                <h2>Cartão de Crédito</h2>
-                <label for="card-holder">Nome do titular:</label>
-                <input type="text" id="card-holder" name="card-holder">
-                <label for="card-number">Número do cartão:</label>
-                <input type="text" id="card-number" name="card-number">
-                <label for="card-cvv">Cód. Segurança:</label>
-                <input type="text" id="card-cvv" name="card-cvv">
-                <label for="card-expiration">Vencimento:</label>
-                <input type="text" id="card-expiration" name="card-expiration">
-                <select id="installments">
-                    <option value="1">1x</option>
-                    <option value="2">2x</option>
-                    <option value="3">3x</option>
-                    <option value="4">4x</option>
-                    <option value="5">5x</option>
-                </select>
+            <div id="credit-panel" class="panel">
+                <h3>CARTÃO DE CRÉDITO</h3>
+                <div class="form-group">
+                    <label for="card-number">Número</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="card-number">
+                        <img src="assets/images/png-transparent-logo-mastercard-product-font-mastercard-text-orange-logo.png" alt="Card 1" id="card-icon-1" class="card-icon">
+                        <img src="assets/images/png-transparent-visa-logo-credit-card-debit-card-mastercard-logo-visa-go-blue-text-trademark.png" alt="Card 2" id="card-icon-2" class="card-icon">
+                    </div>
+                    <div id="card-error" class="error-message">Número de cartão inválido</div>
+                </div>
+                <div class="form-group">
+                    <label for="card-holder">Titular</label>
+                    <input type="text" id="card-holder">
+                </div>
+                <div class="form-group">
+                    <label for="security-code">Cód. Segurança</label>
+                    <input type="text" id="security-code" maxlength="3">
+                </div>
+                <div class="form-group">
+                    <label for="expiry">Vencimento</label>
+                    <input type="text" id="expiry" placeholder="MM/AA">
+                </div>
+                <div class="form-group">
+                    <label for="installments">Parcelas</label>
+                    <select id="installments">
+                        <option value="1">1x R$ 0,00</option>
+                    </select>
+                </div>
+                <div>Total: R$ <span id="credit-total">0,00</span></div>
             </div>
-            <div id="total-value">Total: R$ </div>
-            <button id="pay">Pagar</button>
+
+            <button onclick="pay()" id="pay-button">Pagar</button>
+            <div id="success-message" class="success-message">
+                Pagamento realizado com sucesso!
+            </div>
         </div>
+
         <script src="assets/js/index.js"></script>
     </body>
 </html>

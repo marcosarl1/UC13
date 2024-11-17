@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 obs: document.getElementById('observacoes').value
             };
 
+            if (new Date(formData.dataEntrada) > new Date(formData.dataSaida)) {
+                alert('A data de saída não pode ser anterior à data de entrada.');
+                return;
+            }
+
             try {
                 const response = await fetch('http://localhost:3000/reservations',{
                     method: 'POST',

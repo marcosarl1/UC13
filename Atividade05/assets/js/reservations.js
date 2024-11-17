@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 <td>${new Date(reservations.dataEntrada).toLocaleDateString()}</td>
                 <td>${new Date(reservations.dataSaida).toLocaleDateString()}</td>
                 <td>${reservations.adultos}</td>
-                <td>${reservations.criancas}</td>
+                <td>${reservations.criancas || 0}</td>
                 <td>${reservations.obs}</td>
            `;
             tableBody.appendChild(row);

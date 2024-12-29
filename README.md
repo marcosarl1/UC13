@@ -30,7 +30,7 @@ Repositório dedicado aos projetos e atividades da UC13, focando no desenvolvime
 - JavaScript
 - Figma/Wireframe.cc
 
-- ## 👤 Autor
+## 👤 Autor
 [@marcosarl1](https://github.com/marcosarl1)
 ---
 *Desenvolvido como parte do curso Técnico em Desenvolvimento de Sistemas*

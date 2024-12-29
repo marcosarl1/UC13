@@ -1,4 +1,4 @@
-# UC13 - Desenvolvimento de Interfaces Web 🚀
+# UC13 - Desenvolver e organizar interface de usuário e elementos visuais para aplicações web. (front-end) 🚀
 
 ## 📖 Descrição
 Repositório dedicado aos projetos e atividades da UC13, focando no desenvolvimento de interfaces web através de três atividades principais: wireframes, implementação HTML/CSS e desenvolvimento JavaScript.
